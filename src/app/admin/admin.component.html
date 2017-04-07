@@ -1,0 +1,25 @@
+<div class="form-group">
+  <label for="newName">Name</label>
+  <input id="newName" #newName class='form-control'>
+</div>
+<div class="form-group">
+  <label for="newPosition">Position</label>
+  <input id="newPosition" #newPosition class='form-control'>
+</div>
+<div class="form-group">
+  <label for="newNumber">Position Number</label>
+  <input type="number" id="newNumber" #newNumber class='form-control'>
+</div>
+<div class="form-group">
+  <label for="newPicUrl">Picture URL</label>
+  <input id="newPicUrl" #newPicUrl class='form-control'>
+</div>
+<div class="form-group">
+  <label for="newDescription">Description</label>
+  <input id="newDescription" #newDescription class='form-control'>
+</div>
+<button (click)="saveMember(newName.value, newPosition.value, newNumber.value, newPicUrl.value, newDescription.value); newName.value=''; newPosition.value = ''; newNumber.value = ''; newPicUrl.value = ''; newDescription.value = '';">Add</button>
+
+<div>
+  <app-index></app-index>
+</div>

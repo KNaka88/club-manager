@@ -12,18 +12,21 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
   providers: [MemberService]
 })
 export class IndexComponent implements OnInit {
-
+  currentRoute: string = this.router.url;
   members: FirebaseListObservable<any[]>;
 
-  constructor(private memberService: MemberService, private router: Router) { }
+  constructor(private memberService: MemberService, private router: Router) {
+    console.log(this.router.url);
+   }
 
   ngOnInit() {
     this.members = this.memberService.getMembers();
   }
 
   goToDetail(thisMember) {
-    this.router.navigate(['member', thisMember.$key])
-
+    if(this.currentRoute !== "/admin"){
+      this.router.navigate(['member', thisMember.$key])
+    }
   }
 
 }

@@ -1,0 +1,28 @@
+
+<div *ngIf="formVisible">
+  <h4>Edit Member</h4>
+  <div class="form-group">
+    <label for="editName">Name</label>
+    <input id="editName" [(ngModel)]="member.name"   class='form-control'>
+  </div>
+  <div class="form-group">
+    <label for="editPosition">Position</label>
+    <input id="editPosition" [(ngModel)]="member.position" class='form-control'>
+  </div>
+  <div class="form-group">
+    <label for="editNumber">Position Number</label>
+    <input type="number" id="editNumber" [(ngModel)]="member.number"  class='form-control'>
+  </div>
+  <div class="form-group">
+    <label for="editPicUrl">Picture URL</label>
+    <input id="editPicUrl" [(ngModel)]="member.picUrl"  class='form-control'>
+  </div>
+  <div class="form-group">
+    <label for="editDescription">Description</label>
+    <textarea rows="6" id="editDescription" [(ngModel)]="member.description"  class='form-control'></textarea>
+  </div>
+</div>
+<button class='btn btn-primary' (click)="toggleEditForm()">
+  <span *ngIf="!formVisible">Edit</span>
+  <span *ngIf="formVisible">Close</span>
+</button>

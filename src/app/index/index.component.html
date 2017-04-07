@@ -5,5 +5,8 @@
   <div class="card-block">
     <h4 class="card-title">{{member.name}}</h4>
     <p class="card-text description">See detail</p>
+    <div *ngIf="currentRoute === '/admin'">
+      <app-edit-member [member]="member"></app-edit-member>
+    </div>
   </div>
 </div>
