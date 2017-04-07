@@ -1,7 +1,7 @@
-<div>
   <h3>{{(memberToDisplay | async)?.name}}</h3>
-  <h4>{{(memberToDisplay | async)?.number}}</h4>
-  <h4>{{(memberToDisplay | async)?.description}}</h4>
-  <h4>{{(memberToDisplay | async)?.picUrl}}</h4>
-  <h4>{{(memberToDisplay | async)?.position}}</h4>
-</div>
+  <img src={{(memberToDisplay|async)?.picUrl}} alt='img'>
+  <h4>Position: {{(memberToDisplay | async)?.position}}</h4>
+  <h4><strong>About {{(memberToDisplay | async)?.name}}</strong><br>
+    {{(memberToDisplay | async)?.description}}
+  </h4>
+  <h4>Uniform Number: {{(memberToDisplay | async)?.number}}</h4>

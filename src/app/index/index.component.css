@@ -6,3 +6,11 @@
   height: 190px;
   width: 260px;
 }
+
+.card {
+  margin-bottom: 20px;
+  margin-left: 2px;
+  margin-right: 2px;
+  width: 270px;
+  float: right;
+}

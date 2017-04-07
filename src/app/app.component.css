@@ -1,0 +1,18 @@
+nav {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  box-shadow: 3px 3px 3px darkgray;
+}
+
+#logo {
+  position:fixed;
+  top: 5px;
+  left:10px;
+  width: 190px;
+}
+
+#main {
+  margin-top: 200px;
+}

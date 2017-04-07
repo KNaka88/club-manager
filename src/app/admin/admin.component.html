@@ -1,3 +1,4 @@
+<h3>Add New Member</h3>
 <div class="form-group">
   <label for="newName">Name</label>
   <input id="newName" #newName class='form-control'>
@@ -18,7 +19,7 @@
   <label for="newDescription">Description</label>
   <input id="newDescription" #newDescription class='form-control'>
 </div>
-<button (click)="saveMember(newName.value, newPosition.value, newNumber.value, newPicUrl.value, newDescription.value); newName.value=''; newPosition.value = ''; newNumber.value = ''; newPicUrl.value = ''; newDescription.value = '';">Add</button>
+<button class='btn btn-success' (click)="saveMember(newName.value, newPosition.value, newNumber.value, newPicUrl.value, newDescription.value); newName.value=''; newPosition.value = ''; newNumber.value = ''; newPicUrl.value = ''; newDescription.value = '';">Add</button>
 
 <div>
   <app-index></app-index>

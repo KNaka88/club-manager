@@ -1,9 +1,9 @@
-<h1>Index</h1>
-
-<label for="search">Search</label>
-<input (change)="onChange($event.target.value)" #search id="search">
-
-
+<h1>Portland Trail Blazers</h1>
+<div class='container'>
+  <div class='form-group'>
+    <label for="search" class='text-center'>Search</label>
+    <input class='form-control' (change)="onChange($event.target.value)" #search id="search" placeholder="type name or position or uniform number"><br>
+  </div>
   <div class="card" *ngFor="let member of members | async | nameFilter:userInput" (click)="goToDetail(member)">
     <img class="card-img-top member-img" src={{member.picUrl}} alt="member.name">
     <div class="card-block">
@@ -14,3 +14,4 @@
       </div>
     </div>
   </div>
+</div>
