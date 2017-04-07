@@ -3,15 +3,17 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-//Component
-import { AppComponent } from './app.component';
-
 //routing
 import { routing } from './app.routing';
 
 //Firebase
 import { masterFirebaseConfig } from './api-keys'
 import { AngularFireModule } from 'angularfire2';
+
+//Component
+import { AppComponent } from './app.component';
+import { IndexComponent } from './index/index.component';
+import { AboutComponent } from './about/about.component';
 
 
 export const firebaseConfig = {
@@ -23,7 +25,9 @@ export const firebaseConfig = {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    IndexComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
