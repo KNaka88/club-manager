@@ -22,7 +22,8 @@
     <textarea rows="6" id="editDescription" [(ngModel)]="member.description"  class='form-control'></textarea>
   </div>
 </div>
+
 <button class='btn btn-primary' (click)="toggleEditForm()">
   <span *ngIf="!formVisible">Edit</span>
-  <span *ngIf="formVisible">Close</span>
+  <span *ngIf="formVisible" (click)="updateMember(member)">Update</span>
 </button>

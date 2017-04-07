@@ -21,4 +21,17 @@ export class MemberService {
   saveMember(newMember: Member){
     this.members.push(newMember);
   }
+
+  updateMember(editMember){
+    let memberEntryInFirebase = this.getMemberById(editMember.$key);
+    memberEntryInFirebase.update(
+      {
+        name: editMember.name,
+        position: editMember.position,
+        number: editMember.number,
+        picUrl: editMember.picUrl,
+        description: editMember.description
+      }
+    )
+  }
 }
