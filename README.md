@@ -48,7 +48,7 @@ You will need the following things properly installed on your computer.
   |Behavior|Input|Output|
   |--------|-----|------|
   | Retrieve member list from firebase and Show Detail | - | Show Team Members |
-  | Search User by Category   | Forward  | List of Forward Members Show up |
+  | Search User by name, position, uniform number   | Forward  | List of Forward Members Show up |
   | Add, Edit, Delete Member | Click Add or Edit or Delete button  | the list changes based on the user action |
 
   3. Integration
@@ -78,11 +78,10 @@ You will need the following things properly installed on your computer.
     * member service
 
     Pipe
-    * position-filter
-    * name-filter
+    * name-filter (also works for position, uniform number)
 
     Routing
-    * app.routing 
+    * app.routing
 
   4. UX/UI
     * Include bootstrap
