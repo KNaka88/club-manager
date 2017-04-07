@@ -1,3 +1,9 @@
-<p>
-  index works!
-</p>
+<h1>Index</h1>
+
+<div class="card" *ngFor="let member of members | async">
+  <img class="card-img-top member-img" src={{member.picUrl}} alt="member.name">
+  <div class="card-block">
+    <h4 class="card-title">{{member.name}}</h4>
+    <p class="card-text description">See detail</p>
+  </div>
+</div>
