@@ -17,6 +17,7 @@ import { AboutComponent } from './about/about.component';
 import { MemberDetailComponent } from './member-detail/member-detail.component';
 import { EditMemberComponent } from './edit-member/edit-member.component';
 import { AdminComponent } from './admin/admin.component';
+import { NameFilterPipe } from './name-filter.pipe';
 
 
 export const firebaseConfig = {
@@ -33,7 +34,8 @@ export const firebaseConfig = {
     AboutComponent,
     MemberDetailComponent,
     EditMemberComponent,
-    AdminComponent
+    AdminComponent,
+    NameFilterPipe
   ],
   imports: [
     BrowserModule,
