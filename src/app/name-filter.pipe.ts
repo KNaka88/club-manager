@@ -7,13 +7,15 @@ import { Member } from './member.model';
 })
 
 export class NameFilterPipe implements PipeTransform {
-
-  transform(member: Member[], input: string) {
-    let output: Member[] = [];
-
-    for(let i = 0; i < member.length; i++ ){
-      let regex = /.*member[i].*/i;
-      console.log(regex.test(input));
+  transform(allMembers: Member[], userInput: string){
+    if(userInput === ""){
+      return allMembers;
+    }else if (allMembers){
+      return allMembers.filter((eachItem) => {
+        return eachItem.name.toLowerCase().includes(userInput.toLowerCase()) ||
+               eachItem.position.toLowerCase().includes(userInput.toLowerCase()) ||
+               eachItem.number.includes(userInput);
+      });
     }
   }
 }

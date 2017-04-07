@@ -24,11 +24,6 @@ export class IndexComponent implements OnInit {
     this.members = this.memberService.getMembers();
   }
 
-  ngDoCheck() {
-    console.log(this.userInput);
-
-  }
-
   goToDetail(thisMember) {
     if(this.currentRoute !== "/admin"){
       this.router.navigate(['member', thisMember.$key])
