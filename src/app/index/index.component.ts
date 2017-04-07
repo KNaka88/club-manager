@@ -15,10 +15,15 @@ export class IndexComponent implements OnInit {
 
   members: FirebaseListObservable<any[]>;
 
-  constructor(private memberService: MemberService) { }
+  constructor(private memberService: MemberService, private router: Router) { }
 
   ngOnInit() {
     this.members = this.memberService.getMembers();
+  }
+
+  goToDetail(thisMember) {
+    this.router.navigate(['member', thisMember.$key])
+
   }
 
 }

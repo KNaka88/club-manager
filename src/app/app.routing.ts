@@ -14,7 +14,7 @@ const appRoutes: Routes = [
     component: AboutComponent
   },
   {
-    path: 'member/:name',
+    path: 'member/:id',
     component: MemberDetailComponent
   }
 ];
