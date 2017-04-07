@@ -14,6 +14,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AppComponent } from './app.component';
 import { IndexComponent } from './index/index.component';
 import { AboutComponent } from './about/about.component';
+import { MemberDetailComponent } from './member-detail/member-detail.component';
 
 
 export const firebaseConfig = {
@@ -27,7 +28,8 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     IndexComponent,
-    AboutComponent
+    AboutComponent,
+    MemberDetailComponent
   ],
   imports: [
     BrowserModule,
