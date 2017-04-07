@@ -34,4 +34,9 @@ export class MemberService {
       }
     )
   }
+
+  deleteMember(deleteMember){
+    let memberEntryInFirebase = this.getMemberById(deleteMember.$key);
+    memberEntryInFirebase.remove();
+  }
 }
