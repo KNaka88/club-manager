@@ -5,7 +5,7 @@
 ## Description
 * This website is the fourth independent project for Epicodus "Javascript" class.
 * This website offers club manager acount page.
-
+* [Sample Web Page](https://club-member.firebaseapp.com)
 
 ## Prerequisites
 You will need the following things properly installed on your computer.
